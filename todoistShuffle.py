@@ -1,8 +1,11 @@
 #
 # Source: https://github.com/djnicholson/todoist-shuffle
 #
+# Requires todoist-python:
+# $ sudo pip install todoist-python
+# See https://developer.todoist.com/index.html?python for documentation
+#
 
-from datetime import datetime
 import todoist
 import random
 
@@ -43,7 +46,3 @@ for item in shufflableItems:
     itemProxy.update(date_string=newDueDate,date_lang='en',due_date_utc=None)
 
 api.commit()
-
-# Requires todoist-python:
-# $ sudo pip install todoist-python
-# See https://developer.todoist.com/index.html?python for documentation
